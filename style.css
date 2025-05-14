@@ -1,10 +1,12 @@
 :root {
-    --cor-fundo: #F4F1EC;    
-    --cor-principal: #4C9A2A;   
-    --cor-secundaria: #3A506B;  
-    --cor-destaque: #F9A03F;    
-    --cor-texto: #2E2E2E;       
+    --cor-fundo: #FAF8F5;         /* fundo suave e neutro (quase branco) */
+    --cor-principal: #2F855A;     /* verde forte e elegante – representa o campo */
+    --cor-secundaria: #1A365D;    /* azul profundo – representa a cidade */
+    --cor-destaque: #F6AD55;      /* laranja claro – energia, chama atenção */
+    --cor-texto: #1A202C;         /* grafite escuro – legível em qualquer fundo */
 }
+
+
 body{
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
