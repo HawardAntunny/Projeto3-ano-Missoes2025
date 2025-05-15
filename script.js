@@ -1,11 +1,13 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultados = document.querySelector(".texto-resultados");
+const caixaResultados = document.querySelector(".texto-resultado");
+const imagemPergunta = document.querySelector(".imagem-pergunta");
 
 const perguntas = [
     {
         enunciado: "Por que o campo e a cidade precisam um do outro?",
+        imagem: "img/1.jpeg",
         alternativas: [
             {
                 texto: "Porque ambos têm funções distintas, mas complementares.",
@@ -19,6 +21,7 @@ const perguntas = [
     },
     {
         enunciado: "Qual destas opções representa um produto típico do campo?",
+        imagem: "img/2.jpeg",
         alternativas: [
             {
                 texto: "Arroz, feijão e leite.",
@@ -32,6 +35,7 @@ const perguntas = [
     },
     {
         enunciado: "Como a cidade contribui com o campo?",
+        imagem: "img/3.jpeg",
         alternativas: [
             {
                 texto: "Com serviços, tecnologia e mercado consumidor.",
@@ -45,6 +49,7 @@ const perguntas = [
     },
     {
         enunciado: "O que significa uma conexão saudável entre campo e cidade?",
+        imagem: "img/4.jpeg",
         alternativas: [
             {
                 texto: "Trocas justas, respeito e valorização mútua.",
@@ -58,6 +63,7 @@ const perguntas = [
     },
     {
         enunciado: "Como os jovens podem valorizar essa conexão campo-cidade?",
+        imagem: "img/5.jpeg",
         alternativas: [
             {
                 texto: "Conhecendo a origem dos alimentos e respeitando quem os produz.",
@@ -80,14 +86,16 @@ function mostraPergunta() {
         mostraResultado();
         return;
     }
+
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    imagemPergunta.src = perguntaAtual.imagem;
     caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -104,7 +112,8 @@ function respostaSelecionada(opcaoSelecionada) {
 
 function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
+    imagemPergunta.style.display = "none"; // Oculta imagem na tela final
+    caixaResultados.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
 
