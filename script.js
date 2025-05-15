@@ -15,7 +15,7 @@ const perguntas = [
             },
             {
                 texto: "Porque o campo sempre depende da cidade para sobreviver.",
-                afirmacao: "afirmacao"
+                afirmacao: "negacao"
             }
         ]
     },
@@ -29,7 +29,7 @@ const perguntas = [
             },
             {
                 texto: "Celulares e computadores.",
-                afirmacao: "afirmacao"
+                afirmacao: "negacao"
             }
         ]
     },
@@ -43,7 +43,7 @@ const perguntas = [
             },
             {
                 texto: "Somente com festas e eventos.",
-                afirmacao: "afirmacao"
+                afirmacao: "negacao"
             }
         ]
     },
@@ -57,7 +57,7 @@ const perguntas = [
             },
             {
                 texto: "A cidade dominar o campo economicamente.",
-                afirmacao: "afirmacao"
+                afirmacao: "negacao"
             }
         ]
     },
@@ -71,7 +71,7 @@ const perguntas = [
             },
             {
                 texto: "Ignorando a vida no campo e focando apenas nas cidades grandes.",
-                afirmacao: "afirmacao"
+                afirmacao: "negacao"
             }
         ]
     }
